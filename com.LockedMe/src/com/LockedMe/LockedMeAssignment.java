@@ -39,8 +39,10 @@ public class LockedMeAssignment {
 			System.out.println("---------------------");
 
 			System.out.println("What would you like to do? ");
+			System.out.println("---------------------------");
 			Scanner scanner = new Scanner(System.in);
 			int choice = scanner.nextInt();
+			System.out.println("---------------------------");
 
 			switch (choice) {
 			case 1:
@@ -78,7 +80,7 @@ public class LockedMeAssignment {
 
 		}
 		System.out.println("Press Enter to return to Main Menu:");
-		System.out.print("Enter your choice: ");
+		System.out.println("-----------------------------------");
 		Scanner scanner = new Scanner(System.in);
 		String choice = scanner.nextLine();
 	
@@ -111,6 +113,7 @@ public class LockedMeAssignment {
 			System.out.println("-------------------");
 
 			System.out.print("Enter your choice: ");
+			System.out.println("---------------------");
 			Scanner scanner = new Scanner(System.in);
 			int choice = scanner.nextInt();
 			String filePath = directory.getPath();
@@ -120,6 +123,7 @@ public class LockedMeAssignment {
 			switch (choice) {
 			case 1:
 				System.out.print("Enter the name of the file to add: ");
+				System.out.println("---------------------------------");
 
 				fileName = filePath + "/" + scanner.next() + ".txt";
 				file = new File(fileName);
@@ -136,6 +140,7 @@ public class LockedMeAssignment {
 				break;
 			case 2:
 				System.out.print("Enter the name of the file you want to delete: ");
+				System.out.println("---------------------------------------------");
 
 				fileName = filePath + "/" + scanner.next() + ".txt";
 				file = new File(fileName);
@@ -158,6 +163,7 @@ public class LockedMeAssignment {
 				// option 3 functionality
 
 				System.out.print("Enter the name of the file to find: ");
+				System.out.println("----------------------------------");
 				fileName = filePath + "/" + scanner.next() + ".txt";
 				file = new File(fileName);
 				if (file.exists() && file.isFile()) {
