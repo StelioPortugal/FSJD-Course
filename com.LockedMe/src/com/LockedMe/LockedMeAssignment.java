@@ -22,15 +22,19 @@ public class LockedMeAssignment {
 			directory.mkdir();
 		}
 
+		System.out.println("-------------------------------");
 		System.out.println("Application Name: Locked Me");
+		System.out.println("-------------------------------");
 		System.out.println("Developer Name: Stelio Portugal");
+		System.out.println("-------------------------------");
 
 		// Step 2 : User Interface and User choice
 
 		while (true) {
 
 			boolean exit = false;
-
+			
+			System.out.println("---------------------");
 			System.out.println("Main Menu");
 			System.out.println("---------------------");
 			System.out.println("1. File Management");
@@ -38,6 +42,7 @@ public class LockedMeAssignment {
 			System.out.println("3. Close Application");
 			System.out.println("---------------------");
 
+			System.out.println("---------------------------");
 			System.out.println("What would you like to do? ");
 			System.out.println("---------------------------");
 			Scanner scanner = new Scanner(System.in);
@@ -52,10 +57,16 @@ public class LockedMeAssignment {
 				listFiles();
 				break;
 			case 3:
+				System.out.println("---------------------");
 				System.out.println("Closing Application");
+				System.out.println("---------------------");
+				System.out.println("Goodbye");
+				System.out.println("---------------------");
 				return;
 			default:
+				System.out.println("--------------------------------------------------");
 				System.out.println("Invalid Choice. Please choose from presented list.");
+				System.out.println("--------------------------------------------------");
 
 			}
 
@@ -79,10 +90,12 @@ public class LockedMeAssignment {
 			}
 
 		}
+		System.out.println("-----------------------------------");
 		System.out.println("Press Enter to return to Main Menu:");
 		System.out.println("-----------------------------------");
 		Scanner scanner = new Scanner(System.in);
 		String choice = scanner.nextLine();
+		System.out.println("---------------------------");
 	
 		
 
@@ -104,6 +117,7 @@ public class LockedMeAssignment {
 		// TODO Auto-generated method stub
 
 		while (true) {
+			System.out.println("-------------------");
 			System.out.println("File Management:");
 			System.out.println("-------------------");
 			System.out.println("1. Add a file");
@@ -112,8 +126,9 @@ public class LockedMeAssignment {
 			System.out.println("4. Main menu");
 			System.out.println("-------------------");
 
-			System.out.print("Enter your choice: ");
-			System.out.println("---------------------");
+			System.out.println("--------------------");
+			System.out.println("Enter your choice: ");
+			System.out.println("--------------------");
 			Scanner scanner = new Scanner(System.in);
 			int choice = scanner.nextInt();
 			String filePath = directory.getPath();
@@ -122,25 +137,31 @@ public class LockedMeAssignment {
 
 			switch (choice) {
 			case 1:
-				System.out.print("Enter the name of the file to add: ");
-				System.out.println("---------------------------------");
+				System.out.println("-----------------------------------");
+				System.out.println("Enter the name of the file to add: ");
+				System.out.println("-----------------------------------");
 
 				fileName = filePath + "/" + scanner.next() + ".txt";
 				file = new File(fileName);
 
 				try {
 					if (file.createNewFile()) {
+						System.out.println("------------------------------");
 						System.out.println("File added: " + fileName + "\n");
+						System.out.println("------------------------------");
 					} else {
+						System.out.println("--------------------------------------");
 						System.out.println("Failed to add file: " + fileName + "\n");
+						System.out.println("--------------------------------------");
 					}
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
 				break;
 			case 2:
-				System.out.print("Enter the name of the file you want to delete: ");
-				System.out.println("---------------------------------------------");
+				System.out.println("-----------------------------------------------");
+				System.out.println("Enter the name of the file you want to delete: ");
+				System.out.println("-----------------------------------------------");
 
 				fileName = filePath + "/" + scanner.next() + ".txt";
 				file = new File(fileName);
@@ -150,32 +171,44 @@ public class LockedMeAssignment {
 					// Attempt to delete the file
 					boolean isDeleted = file.delete();
 					if (isDeleted) {
+						System.out.println("-------------------------");
 						System.out.println("File deleted successfully");
+						System.out.println("-------------------------");
 					} else {
+						System.out.println("-------------------------");
 						System.out.println("Failed to delete the file");
+						System.out.println("-------------------------");
 					}
 				} else {
+					System.out.println("-----------------------------");
 					System.out.println("File not found");
+					System.out.println("-----------------------------");
 				}
 
 				break;
 			case 3:
 				// option 3 functionality
-
-				System.out.print("Enter the name of the file to find: ");
-				System.out.println("----------------------------------");
+				System.out.println("------------------------------------");
+				System.out.println("Enter the name of the file to find: ");
+				System.out.println("------------------------------------");
 				fileName = filePath + "/" + scanner.next() + ".txt";
 				file = new File(fileName);
 				if (file.exists() && file.isFile()) {
+					System.out.println("----------------------------------");
 					System.out.println("File " + file.getName() + " found!");
+					System.out.println("----------------------------------");
 				} else {
+					System.out.println("----------------------------------");
 					System.out.println("file not found!!");
+					System.out.println("----------------------------------");
 				}
 				break;
 			case 4:
 				return;
 			default:
+				System.out.println("---------------------------------");
 				System.out.println("Invalid option. Please try again.");
+				System.out.println("---------------------------------");
 				break;
 			}
 		}
