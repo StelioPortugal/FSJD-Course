@@ -137,6 +137,10 @@ public class LockedMeAssignment {
 
 			switch (choice) {
 			case 1:
+				
+				// Add a File
+				
+				
 				System.out.println("-----------------------------------");
 				System.out.println("Enter the name of the file to add: ");
 				System.out.println("-----------------------------------");
@@ -159,6 +163,9 @@ public class LockedMeAssignment {
 				}
 				break;
 			case 2:
+				
+				// Delete File
+				
 				System.out.println("-----------------------------------------------");
 				System.out.println("Enter the name of the file you want to delete: ");
 				System.out.println("-----------------------------------------------");
@@ -187,7 +194,9 @@ public class LockedMeAssignment {
 
 				break;
 			case 3:
-				// option 3 functionality
+				// option 3 Find File
+				
+				
 				System.out.println("------------------------------------");
 				System.out.println("Enter the name of the file to find: ");
 				System.out.println("------------------------------------");
@@ -198,6 +207,9 @@ public class LockedMeAssignment {
 					System.out.println("File " + file.getName() + " found!");
 					System.out.println("----------------------------------");
 				} else {
+					
+					// FNF - File not found Exception
+					
 					System.out.println("----------------------------------");
 					System.out.println("file not found!!");
 					System.out.println("----------------------------------");
